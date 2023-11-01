@@ -1,0 +1,38 @@
+*{
+    background: color #bed6c5;
+    
+}
+
+
+.input1{
+    margin-top: 50px;
+}
+.input1 input{
+    width: 100vh;
+    height: 5rem;
+  
+   
+}
+.input2{
+    margin-top: 50px;
+}
+.input2 textarea{
+    width: 100vh;
+    height: 30vh;
+  
+}
+
+#btn{
+    margin-top: 10px;
+}
+
+span{
+    font-weight: bold;
+    color:white;
+}
+
+#b{
+    font-size: xx-large;
+}
+
+

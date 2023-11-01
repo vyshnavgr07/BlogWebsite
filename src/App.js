@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Create from './components/Create';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, Routes } from 'react-router-dom';
+import Blogs from './components/Blogs';
+import Blog from './components/Blog';
+import { createContext, useContext, useState } from 'react';
+export const BlogeContext=createContext();
 
 function App() {
-  return (
+  const [post,setPost]=useState([]);
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+<BlogeContext.Provider value={{post,setPost}}> 
+  <Routes>
+       <Route    path='/'     element={<Create/>} />
+        <Route   path="/blogs"  element={<Blogs/>} />
+        <Route   path="/blog/:id"    element={<Blog/>} />
+   </Routes>
+    
+   </BlogeContext.Provider>
+
+
+
     </div>
   );
 }

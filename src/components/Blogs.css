@@ -1,0 +1,11 @@
+.main{
+    text-decoration: none;
+    height: 1000vh;
+    width: 100%;
+background-color: aquamarine;
+    color: white;
+}
+
+.mainbtn{
+    margin-top:100px;
+}
